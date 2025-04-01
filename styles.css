@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light text for dark theme */
+    background: #0a0a1a; /* Deep dark blue background */
+    overflow-x: hidden;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind content */
+}
+
+/* Sliding Menu */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #00b4d8; /* Neon cyan */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1e1e2f; /* Darker purple-blue */
+    color: #e0e0e0;
+    padding: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: right;
+    color: #ff4081; /* Neon pink */
+}
+
+.sidebar a {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #00b4d8; /* Neon cyan */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.hero-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #00b4d8; /* Neon border */
+    transition: transform 0.5s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.1);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(0, 180, 216, 0.7); /* Neon glow */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #b0b0b0; /* Softer gray */
+}
+
+.hero-text a {
+    color: #00b4d8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-text a:hover {
+    color: #ff4081; /* Neon pink */
+}
+
+/* General Section Styling */
+.section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(30, 30, 47, 0.8); /* Semi-transparent dark card */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00b4d8; /* Neon cyan */
+    text-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
+}
+
+/* Project Cards */
+.project-card {
+    background: #2a2a3d; /* Darker card */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 180, 216, 0.2); /* Subtle glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+}
+
+.project-card h3 {
+    color: #ff4081; /* Neon pink */
+}
+
+.project-card a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    color: #ff4081;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin: 0.5rem 0;
+    color: #b0b0b0;
+}
+
+ul li strong {
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #1e1e2f;
+    color: #e0e0e0;
+}
+
+footer a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff4081;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    .hero-img {
+        width: 150px;
+        height: 150px;
+    }
+    .sidebar {
+        width: 200px;
+    }
+}
